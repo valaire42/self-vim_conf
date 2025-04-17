@@ -1,4 +1,4 @@
-set number
+
 function! s:ReplaceTemplateVarsAndGo()
   " 替换 %:t 为当前文件名
   silent! %s/%:t/\=expand('%:t')/g
