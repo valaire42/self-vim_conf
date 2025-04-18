@@ -4,5 +4,4 @@
 
 ```bash
 git clone https://github.com/valaire42/self-vim_conf.git ~/
-cd ~/self-vim_conf
-./deploy.sh
+sh ~/self-vim_conf/deloy.sh
