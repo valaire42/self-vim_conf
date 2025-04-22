@@ -11,10 +11,14 @@ fi
 
 # 复制配置文件到 ~/.vim_runtime 进行覆盖
 echo "正在复制配置文件到 $VIM_RUNTIME_DIR ..."
-cp -r my_configs.vim my_plugins templates "$VIM_RUNTIME_DIR"
-
-echo "配置文件已成功复制到 $VIM_RUNTIME_DIR."
-
+cp -r ~/self-vim_conf/my_configs.vim "$VIM_RUNTIME_DIR"
+cp -r ~/self-vim_conf/my_plugins "$VIM_RUNTIME_DIR"
+cp -r ~/self-vim_conf/templates "$VIM_RUNTIME_DIR"
+if [ $? -eq 0 ];then
+    echo "配置文件已成功复制到 $VIM_RUNTIME_DIR."
+else
+    echo "复制失败"
+fi
 # 删除仓库文件夹 self-vim_conf
 echo "删除仓库文件夹 self-vim_conf ..."
 cd ~
